@@ -1,0 +1,45 @@
+/* Estilos adicionales para Evo Player */
+
+/* Animaciones de entrada */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.song-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Efectos de carga */
+.loading {
+    background: linear-gradient(90deg, #1a1a2f 25%, #252540 50%, #1a1a2f 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Mejoras de responsive */
+@media (max-width: 1024px) {
+    .flex.h-screen {
+        flex-direction: column;
+    }
+    
+    .w-80 {
+        width: 100%;
+        height: auto;
+    }
+}
